@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
     background-color: #d7d4e0; 
@@ -35,10 +36,9 @@ html, body {
 
 
 .text_area input {
-    min-width: 300px;
     
-    width: 440px;
-    max-width: 600px;
+    
+    width: 50vw;
     height: 100px;
    
     
@@ -56,6 +56,7 @@ html, body {
 }
 
 #cal_area{
+    width: 50vw;
     
     padding-left: 20px;
     padding-right: 20px;
@@ -65,9 +66,9 @@ html, body {
     background-color: #252D54;
     
     border-radius: 10px;
-   
+   box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 400px;
+    
     
 }
 
@@ -110,30 +111,72 @@ button:active {
     background-color: #ccc;
 }
 
+
+
 /* Add Media Queries for smaller devices */
 @media (max-width: 768px) {
-    #cal_area {
-        width: 95%; /* Adjust the calculator area width on small devices */
-    }
+    .text_area input {
     
-    #text_area_value {
-        font-size: 24px; /* Smaller text size */
+    
+        width: 70vw;
+        height: 100px;
+        
+       
+        
+       
     }
-
-    button {
-        padding: 15px; /* Smaller buttons */
-        font-size: 18px;
+    #cal_area{
+        width:70vw;
     }
+   
 }
 
-@media (max-width: 480px) {
-    #text_area_value {
-        font-size: 20px;
-        height: 80px;
+
+@media (max-width: 425px) {
+    .text_area input {
+    
+    
+        width: 80vw;
+        height: 100px;
+        
+       
+        
+       
+    }
+    #cal_area{
+        width:80vw;
     }
 
-    button {
-        padding: 10px;
-        font-size: 16px;
+    @media (max-width: 375px) {
+        .text_area input {
+        
+        
+            width: 300px;
+            height: 100px;
+            
+           
+            
+           
+        }
+        #cal_area{
+            width:300px;
+        }
+       
+    }
+    @media (max-width: 320px) {
+        .text_area input {
+        
+        
+            width: 300px;
+            height: 100px;
+            
+           
+            
+           
+        }
+        #cal_area{
+            width:300px;
+        }
+       
     }
 }
