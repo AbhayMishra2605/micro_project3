@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="root">
+        <div id="app">
+            <div class="text_area">
+                <input type="text" id="text_area_value" oninput="filterInput(event)" >
+            </div>
+            <br>
+            <div id="cal_area">
+                <div id="values">
+                    <button onclick="fill_data(7)" id="seven" > 7</button>
+                    <button onclick="fill_data(8)" id="eight"> 8</button>
+                    <button onclick="fill_data(9)" id="nine"> 9</button>
+                    <button onclick="removeBtn()" id="del"> DEL</button>    
+                    <button onclick="fill_data(4)" id="four"> 4</button>
+                    <button onclick="fill_data(5)" id="five"> 5</button>
+                    <button onclick="fill_data(6)" id="six"> 6</button>
+                    <button onclick="fill_data('+')" id="add"> +</button>
+                    <button onclick="fill_data(1)" id="one"> 1</button>
+                    <button onclick="fill_data(2)" id="two"> 2</button>
+                    <button onclick="fill_data(3)" id="three" > 3</button>
+                    <button onclick="fill_data('-')" id="sub"> -</button>
+                    <button onclick="fill_data('.')" id="point"> .</button>
+                    <button onclick="fill_data(0)" id="0"> 0</button>
+                    <button onclick="fill_data('/')" id="div">/</button>
+                    <button onclick="fill_data('x')" id="mul"> x</button>
+                </div>
+                <div id="reset_calbtn">
+                    <button onclick="clearBtn()" id="reset"> Reset </button>
+                    <button id="calculateButton"> =</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const operators = ['+', '-', '/', '*', 'x'];
+
+        function filterInput(event) {
+            let text = event.target;
+            let regex = /^[0-9+\-*/%.]*$/;
+            if (!regex.test(text.value)) {
+                text.value = text.value.replace(/[^0-9+\-*/%.]/g, '');
+            }
+        }
+
+        function calculate() {
+            let text = document.getElementById("text_area_value");
+            let value = text.value;
+            let lastChar = value.slice(-1);
+
+            if (value === '') {
+                text.value = '';
+            } else if (['+', '-', 'x', '/'].includes(lastChar))
+            {
+                
+            } else {
+                if (value.includes('x')) {
+                    value = value.replace(/x/g, '*');
+                }
+
+                let regex = /\/\s*0(?![\d])/;
+
+                if (regex.test(value)) {
+                    window.alert(' Division by 0');
+                } else {
+                    try {
+                        let result = eval(value);
+                        text.value = result;
+                    } catch (error) {
+                        text.value = 'Error';
+                    }
+                }
+            }
+        }
+
+        function fill_data(input) {
+    let text = document.getElementById("text_area_value");
+    let value = text.value;
+
+    
+    if (value === '0') {
+        text.value = '';
+    }
+
+    
+    let lastChar = value.slice(-1);
+    let secondLastChar = value.slice(-2, -1);
+
+    
+    if (operators.includes(input)) {
+        if (operators.includes(lastChar)) {
+            if (input === 'x') {
+       
+                if (lastChar === 'x' && secondLastChar !== 'x') {
+                    text.value += input;
+                } else if (lastChar === 'x' && secondLastChar === 'x') {
+       
+                    return;
+                } else {
+       
+                    text.value = value.slice(0, -1) + input;
+                }
+            } else {
+       
+                text.value = value.slice(0, -1) + input;
+            }
+        } else {
+       
+            text.value += input;
+        }
+    } else {
+       
+        text.value += input;
+    }
+}
+
+
+        function removeBtn() {
+            let text = document.getElementById("text_area_value");
+            text.value = text.value.slice(0, -1);
+        }
+
+        let button = document.getElementById('calculateButton');
+        let input = document.getElementById('text_area_value');
+
+        button.addEventListener('click', calculate);
+        input.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                calculate();
+                event.preventDefault(); 
+            }
+        });
+
+        function clearBtn() {
+            let text = document.getElementById("text_area_value");
+            text.value = '0'; 
+        }
+    </script>
+</body>
+</html>
