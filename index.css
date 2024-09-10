@@ -109,3 +109,31 @@ button:hover {
 button:active {
     background-color: #ccc;
 }
+
+/* Add Media Queries for smaller devices */
+@media (max-width: 768px) {
+    #cal_area {
+        width: 95%; /* Adjust the calculator area width on small devices */
+    }
+    
+    #text_area_value {
+        font-size: 24px; /* Smaller text size */
+    }
+
+    button {
+        padding: 15px; /* Smaller buttons */
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    #text_area_value {
+        font-size: 20px;
+        height: 80px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
