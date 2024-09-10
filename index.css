@@ -118,7 +118,7 @@ button:active {
     .text_area input {
     
     
-        width: 70vw;
+        width: 440px;
         height: 100px;
         
        
@@ -126,7 +126,7 @@ button:active {
        
     }
     #cal_area{
-        width:70vw;
+        width:440px;
     }
    
 }
@@ -151,7 +151,7 @@ button:active {
         .text_area input {
         
         
-            width: 300px;
+            width: 350px;
             height: 100px;
             
            
@@ -167,7 +167,7 @@ button:active {
         .text_area input {
         
         
-            width: 300px;
+            width: 310px;
             height: 100px;
             
            
@@ -175,7 +175,7 @@ button:active {
            
         }
         #cal_area{
-            width:300px;
+            width:310px;
         }
        
     }
