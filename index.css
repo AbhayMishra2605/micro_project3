@@ -395,7 +395,9 @@ button:active {
         
     }
 }
- html, body {
+ 
+
+html, body {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -742,19 +744,19 @@ button:active {
     .text_area input {
         
         
-        width: 94vw;
-        height: 150px;
+        width: 95vw;
+        height: 110px;
        
         
        
     }
     #text_area_value{
-        font-size: 32px;
+        font-size: 30px;
         
-        margin-bottom: 20px;
-        border-radius: 21px;
+        margin-bottom: 19px;
+        border-radius: 16px;
        
-        padding-right: 30px;
+        padding-right: 25px;
        
     
     }
@@ -767,29 +769,201 @@ button:active {
     }
     
     #cal_area{
-        width: 94vw;
+        width: 95vw;
         
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-left: 28px;
+        padding-right: 28px;
+        padding-top: 46px;
+        padding-bottom: 46px;
         
-        border-radius: 20px;
+        border-radius: 18px;
         
         
     }
     
     #reset_calbtn{
         
-        margin-top: 16px;
-        grid-gap: 16px;
+        margin-top: 15px;
+        grid-gap: 15px;
     }
     
     button {
         padding: 20px;
-        font-size: 25px;
+        font-size: 20px;
         border-radius: 20px;
         
     }
 }
+
+@media(max-width: 501px){
+    
+    .text_area input {
+        
+        
+        width: 95vw;
+        height: 100px;
+       
+        
+       
+    }
+    #text_area_value{
+        font-size: 30px;
+        
+        margin-bottom: 19px;
+        border-radius: 16px;
+       
+        padding-right: 20px;
+       
+    
+    }
+    
+    
+    #values {
+        
+        grid-gap: 10px;
+        
+    }
+    
+    #cal_area{
+        width: 95vw;
+        
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        
+        border-radius: 18px;
+        
+        
+    }
+    
+    #reset_calbtn{
+        
+        margin-top: 13px;
+        grid-gap: 13px;
+    }
+    
+    button {
+        padding: 15px;
+        font-size: 20spx;
+        border-radius: 18px;
+        
+    }
+}
+
+
+@media(max-width: 401px){
+    
+    .text_area input {
+        
+        
+        width: 95vw;
+        height: 100px;
+       
+        
+       
+    }
+    #text_area_value{
+        font-size: 30px;
+        
+        margin-bottom: 19px;
+        border-radius: 16px;
+       
+        padding-right: 20px;
+       
+    
+    }
+    
+    
+    #values {
+        
+        grid-gap: 10px;
+        
+    }
+    
+    #cal_area{
+        width: 95vw;
+        
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        
+        border-radius: 18px;
+        
+        
+    }
+    
+    #reset_calbtn{
+        
+        margin-top: 13px;
+        grid-gap: 13px;
+    }
+    
+    button {
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 18px;
+        
+    }
+}
+
+@media(max-width: 301px){
+    
+    .text_area input {
+        
+        
+        width: 95vw;
+        height: 70px;
+       
+        
+       
+    }
+    #text_area_value{
+        font-size: 25px;
+        
+        margin-bottom: 15px;
+        border-radius: 10px;
+       
+        padding-right: 15px;
+       
+    
+    }
+    
+    
+    #values {
+        
+        grid-gap: 10px;
+        
+    }
+    
+    #cal_area{
+        width: 95vw;
+        
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        
+        border-radius: 10px;
+        
+        
+    }
+    
+    #reset_calbtn{
+        
+        margin-top: 10px;
+        grid-gap: 10px;
+    }
+    
+    button {
+        padding: 10px;
+        font-size: 10px;
+        border-radius: 10px;
+        
+    }
+}
+
+
+
  
