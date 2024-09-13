@@ -1,6 +1,7 @@
+
 html, body {
-    height: 10%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     margin: 0;
     padding: 0;
     background-color: #d7d4e0; 
@@ -12,16 +13,17 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
     
 }
 
 #text_area_value{
-    font-size: 28px;
+    font-size: 2vw;
     text-align: right;
-    margin-bottom: 10px;
-    border-radius: 12px;
+    margin-bottom: 0.8vw;
+    border-radius: 0.9vw;
     background-color: #181f32;
     color: #ffffff;
    border: none;
@@ -29,7 +31,7 @@ html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 800;
     box-sizing: border-box;
-    padding-right: 20px;
+    padding-right: 1.5vw;
    
 
 }
@@ -38,8 +40,8 @@ html, body {
 .text_area input {
     
     
-    width: 500px;
-    height: 120px;
+    width: 35vw;
+    height: 9vw;
    
     
    
@@ -51,21 +53,21 @@ html, body {
     
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-    grid-gap: 10px;
+    grid-gap: 0.5vw;
     
 }
 
 #cal_area{
-    width: 500px;
+    width: 35vw;
     
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-radius: 6px;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    border-radius: 0.5vw;
     background-color: #252D54;
     
-    border-radius: 10px;
+    border-radius: 0.8vw;
    box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     
@@ -74,20 +76,20 @@ html, body {
 
 #reset_calbtn{
     
-    margin-top: 10px;
+    margin-top: 0.8vw;
     display: grid;
     
     grid-template-columns: repeat(2,1fr);
-    grid-gap: 10px;
+    grid-gap: 0.8vw;
 }
 
 button {
-    padding: 20px;
-    font-size: 20px;
+    padding: 1.5vw;
+    font-size: 1.5vw;
     cursor: pointer;
     border: none;
     background-color: #EAE3DB;
-    border-radius: 12px;
+    border-radius: 0.9vw;
     font-weight: 800;
     color: #3b4664;
     
@@ -106,9 +108,8 @@ button {
 
 
 
-
 /* Add Media Queries for smaller devices */
-
+@media only screen and (orientation: portrait) {
 @media(max-width: 1100px){
     
     .text_area input {
@@ -234,7 +235,7 @@ button {
        
     }
     #text_area_value{
-        font-size: 32px;
+        font-size: 50px;
         
         margin-bottom: 22px;
         border-radius: 25px;
@@ -252,7 +253,7 @@ button {
     }
     
     #cal_area{
-        width: 90vw;
+        width: 92vw;
         
         padding-left: 35px;
         padding-right: 35px;
@@ -272,7 +273,7 @@ button {
     
     button {
         padding: 35px;
-        font-size: 30px;
+        font-size: 40px;
         border-radius: 30px;
         
     }
@@ -390,423 +391,24 @@ button {
     }
 }
  
-
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #d7d4e0; 
-    font-family: 'Inter', sans-serif;
-    
-}
-
-#root {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    
-}
-
-#text_area_value{
-    font-size: 28px;
-    text-align: right;
-    margin-bottom: 10px;
-    border-radius: 12px;
-    background-color: #181f32;
-    color: #ffffff;
-   border: none;
-    outline: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 800;
-    box-sizing: border-box;
-    padding-right: 20px;
-   
-
-}
-
-
-.text_area input {
-    
-    
-    width: 500px;
-    height: 120px;
-   
-    
-   
-}
-
-
-
-#values {
-    
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-    grid-gap: 10px;
-    
-}
-
-#cal_area{
-    width: 500px;
-    
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-radius: 6px;
-    background-color: #252D54;
-    
-    border-radius: 10px;
-   box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-    
-}
-
-#reset_calbtn{
-    
-    margin-top: 10px;
-    display: grid;
-    
-    grid-template-columns: repeat(2,1fr);
-    grid-gap: 10px;
-}
-
-button {
-    padding: 20px;
-    font-size: 20px;
-    cursor: pointer;
-    border: none;
-    background-color: #EAE3DB;
-    border-radius: 12px;
-    font-weight: 800;
-    color: #3b4664;
-    
-}
-#del,#reset{
-    background-color: #647299;
-    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25) ;
-    color: #ffffff;
-}
-
-#calculateButton{
-    color: #ffffff;
-    background-color: red;
-}
-
-button:hover {
-    background-color: #ddd;
-}
-
-button:active {
-    background-color: #ccc;
-}
-
-
-
-/* Add Media Queries for smaller devices */
-
-@media(max-width: 1100px){
-    
-    .text_area input {
-        
-        
-        width: 80vw;
-        height: 200px;
-       
-        
-       
-    }
-    #text_area_value{
-        font-size: 40px;
-        
-        margin-bottom: 25px;
-        border-radius: 27px;
-       
-        padding-right: 41px;
-       
-    
-    }
-    
-    
-    #values {
-        
-        grid-gap: 20px;
-        
-    }
-    
-    #cal_area{
-        width: 80vw;
-        
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 60px;
-        padding-bottom: 60px;
-        
-        border-radius: 25px;
-        
-        
-    }
-    
-    #reset_calbtn{
-        
-        margin-top: 20px;
-        grid-gap: 20px;
-    }
-    
-    button {
-        padding: 40px;
-        font-size: 40px;
-        border-radius: 20px;
-        
-    }
-    }
-        
-    
-@media(max-width: 1000px){
-    
-    .text_area input {
-        
-        
-        width: 90vw;
-        height: 180px;
-       
-        
-       
-    }
-    #text_area_value{
-        font-size: 36px;
-        
-        margin-bottom: 22px;
-        border-radius: 25px;
-       
-        padding-right: 37px;
-       
-    
-    }
-    
-    
-    #values {
-        
-        grid-gap: 18px;
-        
-    }
-    
-    #cal_area{
-        width: 90vw;
-        
-        padding-left: 35px;
-        padding-right: 35px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        
-        border-radius: 22px;
-        
-        
-    }
-    
-    #reset_calbtn{
-        
-        margin-top: 18px;
-        grid-gap: 18px;
-    }
-    
-    button {
-        padding: 35px;
-        font-size: 35px;
-        border-radius: 30px;
-        
-    }
-}
-
-@media(max-width: 801px){
-    
-    .text_area input {
-        
-        
-        width: 92vw;
-        height: 170px;
-       
-        
-       
-    }
-    #text_area_value{
-        font-size: 32px;
-        
-        margin-bottom: 22px;
-        border-radius: 25px;
-       
-        padding-right: 37px;
-       
-    
-    }
-    
-    
-    #values {
-        
-        grid-gap: 18px;
-        
-    }
-    
-    #cal_area{
-        width: 90vw;
-        
-        padding-left: 35px;
-        padding-right: 35px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        
-        border-radius: 22px;
-        
-        
-    }
-    
-    #reset_calbtn{
-        
-        margin-top: 18px;
-        grid-gap: 18px;
-    }
-    
-    button {
-        padding: 35px;
-        font-size: 30px;
-        border-radius: 30px;
-        
-    }
-}
-        
-@media(max-width: 701px){
-    
-    .text_area input {
-        
-        
-        width: 93vw;
-        height: 160px;
-       
-        
-       
-    }
-    #text_area_value{
-        font-size: 34px;
-        
-        margin-bottom: 21px;
-        border-radius: 23px;
-       
-        padding-right: 35px;
-       
-    
-    }
-    
-    
-    #values {
-        
-        grid-gap: 15px;
-        
-    }
-    
-    #cal_area{
-        width: 93vw;
-        
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        
-        border-radius: 20px;
-        
-        
-    }
-    
-    #reset_calbtn{
-        
-        margin-top: 18px;
-        grid-gap: 18px;
-    }
-    
-    button {
-        padding: 30px;
-        font-size: 28px;
-        border-radius: 30px;
-        
-    }
-}
- 
-@media(max-width: 601px){
-    
-    .text_area input {
-        
-        
-        width: 95vw;
-        height: 110px;
-       
-        
-       
-    }
-    #text_area_value{
-        font-size: 30px;
-        
-        margin-bottom: 19px;
-        border-radius: 16px;
-       
-        padding-right: 25px;
-       
-    
-    }
-    
-    
-    #values {
-        
-        grid-gap: 13px;
-        
-    }
-    
-    #cal_area{
-        width: 95vw;
-        
-        padding-left: 28px;
-        padding-right: 28px;
-        padding-top: 46px;
-        padding-bottom: 46px;
-        
-        border-radius: 18px;
-        
-        
-    }
-    
-    #reset_calbtn{
-        
-        margin-top: 15px;
-        grid-gap: 15px;
-    }
-    
-    button {
-        padding: 20px;
-        font-size: 20px;
-        border-radius: 20px;
-        
-    }
-}
-
 @media(max-width: 501px){
     
     .text_area input {
         
         
         width: 95vw;
-        height: 100px;
+        height: 10vh;
        
         
        
     }
     #text_area_value{
-        font-size: 30px;
+        font-size: 10vw;
         
-        margin-bottom: 19px;
-        border-radius: 16px;
+        margin-bottom: 4vw;
+        border-radius: 3vw;
        
-        padding-right: 20px;
+        padding-right: 4vw;
        
     
     }
@@ -814,33 +416,33 @@ button:active {
     
     #values {
         
-        grid-gap: 10px;
+        grid-gap: 2vw;
         
     }
     
     #cal_area{
         width: 95vw;
         
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 25px;
-        padding-bottom: 25px;
+        padding-left: 4vw;
+        padding-right: 4w;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
         
-        border-radius: 18px;
+        border-radius: 3vw;
         
         
     }
     
     #reset_calbtn{
         
-        margin-top: 13px;
-        grid-gap: 13px;
+        margin-top: 2vw;
+        grid-gap: 2vw;
     }
     
     button {
-        padding: 15px;
-        font-size: 20spx;
-        border-radius: 18px;
+        padding: 3vw;
+        font-size: 4vw;
+        border-radius: 3vw;
         
     }
 }
@@ -957,7 +559,5 @@ button:active {
         
     }
 }
+}
 
-
-
- 
