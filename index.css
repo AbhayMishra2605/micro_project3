@@ -103,13 +103,7 @@ button {
     background-color: red;
 }
 
-button:hover {
-    background-color: #ddd;
-}
 
-button:active {
-    background-color: #ccc;
-}
 
 
 
